@@ -1,8 +1,12 @@
 all:
-	@echo "Only target known: info"
+	@echo "info: show current workspace status"
+	@echo "prep: initialize the workspace"
 
 info:
 	rosws info
 
-.PHONY: info
+prep:
+	rosws update
+
+.PHONY: info prep
 
